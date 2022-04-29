@@ -1,6 +1,6 @@
 # newcoin.pools-js
 
-JS Library to read data from newcoin.pools smart contract.
+JS Library to interact with newcoin.pools smart contract.
 
 ## Usage
 
@@ -14,7 +14,7 @@ npm i @newcoin-foundation/newcoin.pools-js
 
 ### Initialize
 
-Web library can be found in the [dist] folder
+Web library can be found in the [dist] folder.
 
 ```javascript
 // Standard import
@@ -26,11 +26,12 @@ import { ActionGenerator, RpcApi } from "newcoinpools"
 
 ## Documentation
 
-### RpcAapi
+### RpcApi
+
 Uses only native nodeos calls to chain api plugin.
 
 ### ActionGenerator
 
-Helper class to construct contract actions  which can be pushed on chain with eosjs. 
+Helper class to construct contract actions which can be signed and pushed to chain with eosjs. 
 
-Detailed information about each action can be found [here](https://github.com/pinknetworkx/atomicassets-contract/wiki/Actions) 
+Detailed information about each action can be found [here](docs/actions.md).
