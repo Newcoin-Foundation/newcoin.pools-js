@@ -1,11 +1,4 @@
-export type EosioAuthorizationObject = { actor: string; permission: string };
-
-export type EosioActionObject = {
-  account: string;
-  name: string;
-  authorization: EosioAuthorizationObject[];
-  data: any;
-};
+import { EosioAuthorizationObject, EosioActionObject } from "../types";
 
 /* tslint:disable:variable-name */
 
@@ -21,7 +14,7 @@ export class ActionGenerator {
     return this._pack(this.contract, authorization, "open", {
       owner,
       symbol,
-      payer
+      payer,
     });
   }
 
@@ -32,7 +25,7 @@ export class ActionGenerator {
   ): Promise<EosioActionObject[]> {
     return this._pack(this.contract, authorization, "close", {
       owner,
-      symbol
+      symbol,
     });
   }
 
@@ -51,7 +44,7 @@ export class ActionGenerator {
       ticker,
       is_inflatable,
       is_deflatable,
-      is_treasury
+      is_treasury,
     });
   }
 
@@ -62,7 +55,7 @@ export class ActionGenerator {
   ): Promise<EosioActionObject[]> {
     return this._pack(this.contract, authorization, "addwhlst", {
       pool_id,
-      user
+      user,
     });
   }
 
@@ -73,7 +66,7 @@ export class ActionGenerator {
   ): Promise<EosioActionObject[]> {
     return this._pack(this.contract, authorization, "rmvwhlst", {
       pool_id,
-      user
+      user,
     });
   }
 
@@ -98,7 +91,7 @@ export class ActionGenerator {
   ): Promise<EosioActionObject[]> {
     return this._pack(this.contract, authorization, "withdraw", {
       owner,
-      quantity
+      quantity,
     });
   }
 

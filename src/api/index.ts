@@ -2,11 +2,11 @@ import {
   GetCurrencyStats,
   GetCurrencyBalance,
   GetTableRowsPayload,
-} from "../interfaces/chain.interface";
-import { PoolPayload } from "../interfaces/pool.interface";
-import { WhiteListPayload } from "../interfaces/whitelist.interface";
+  PoolPayload,
+  WhiteListPayload,
+} from "../interfaces";
 
-export default class RpcApi {
+export class ChainApi {
   readonly nodeos_url: string;
   readonly contract: string;
   readonly fetch: any;

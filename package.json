@@ -3,16 +3,23 @@
   "version": "2.0.2",
   "description": "js module to fetch data from the newcoin.pools smart contract",
   "main": "dist/index.js",
+  "types": "",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build:npm": "tsc",
     "build:web": "webpack --config webpack.prod.js",
     "build": "yarn run build:npm && yarn run build:web",
     "test": "mocha -r ts-node/register test/**/*.test.ts",
-    "publish": "yarn build && yarn publish"
+    "publish": "yarn publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Newcoin-Foundation/newcoin.pools-js.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "newcoin",
@@ -20,7 +27,7 @@
     "blockchain",
     "newlife"
   ],
-  "author": "Avm07",
+  "author": "Artem Maliuga <@Avm07>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Newcoin-Foundation/newcoin.pools-js/issues"

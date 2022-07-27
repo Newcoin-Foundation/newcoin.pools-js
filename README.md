@@ -18,15 +18,15 @@ Web library can be found in the [dist] folder.
 
 ```javascript
 // Standard import
-const { ActionGenerator, RpcApi } = require("newcoinpools");
+const { ActionGenerator, ChainApi } = require("@newcoin-foundation/newcoin.pools-js");
 
 // ES6 import
-import { ActionGenerator, RpcApi } from "newcoinpools"
+import { ActionGenerator, ChainApi } from "@newcoin-foundation/newcoin.pools-js"
 ```
 
 ## Documentation
 
-### RpcApi
+### ChainApi
 
 Uses only native nodeos calls to chain api plugin.
 

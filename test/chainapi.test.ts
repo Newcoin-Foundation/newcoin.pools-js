@@ -1,19 +1,19 @@
 import { doesNotMatch } from "assert";
 import { expect } from "chai";
-import RpcApi from "../../src/api/index";
+import { ChainApi } from "../src/api";
 import {
   GetCurrencyStats,
   GetCurrencyBalance,
   GetTableRowsPayload,
-} from "../../src/interfaces/chain.interface";
-import { PoolPayload } from "../../src/interfaces/pool.interface";
-import { WhiteListPayload } from "../../src/interfaces/whitelist.interface";
+  PoolPayload,
+  WhiteListPayload
+} from "../src/interfaces";
 
 // tslint:disable-next-line:no-var-requires
 const fetch = require("node-fetch");
 
-describe("RPC API", () => {
-  const api = new RpcApi("https://testnet.newcoin.org", "pools.nco", fetch);
+describe("Chain API", () => {
+  const api = new ChainApi("https://testnet.newcoin.org", "pools.nco", fetch);
 
   const examplePool: PoolPayload = {
     id: "1",
